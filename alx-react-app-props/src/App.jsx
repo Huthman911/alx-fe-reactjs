@@ -1,5 +1,5 @@
 import ProfilePage from './components/ProfilePage'
-import UserContext from './UserContext'
+import UserContext from './components/UserContext'
 import Counter  from './components/Counter'
 import UserProfile from './components/UserProfile'
 import Header from './components/Header'
