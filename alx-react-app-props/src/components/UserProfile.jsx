@@ -1,4 +1,8 @@
+import { useContext } from 'react'; 
+import UserContext from './UserContext';
+
 function UserProfile (){
+    const userData = useContext(UserContext);
     const UserProfile = (props) =>{
         return(
             <div style={{ border: '1px solid gray', padding: '10px', margin: '10px' }}>
