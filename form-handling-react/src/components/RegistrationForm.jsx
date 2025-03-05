@@ -11,9 +11,9 @@ const RegistrationForm = () => {
 
     const validateForm = () => {
         let newErrors = {};
-        if (!formData.username.trim()) newErrors.username = "Username is required";
-        if (!formData.email.trim()) newErrors.email = "Email is required";
-        if (!formData.password.trim()) newErrors.password = "Password is required";
+        if (!username.trim()) newErrors.username = "Username is required";
+        if (!email.trim()) newErrors.email = "Email is required";
+        if (!password.trim()) newErrors.password = "Password is required";
         setErrors(newErrors);
         return object.keys(newErrors).length === 0;
     }
