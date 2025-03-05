@@ -1,4 +1,3 @@
-import FormikForm from './components/formikForm'
 import RegistrationForm from './components/RegistrationForm'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -10,7 +9,7 @@ function App() {
 
   return (
     <>
-    <FormikForm />
+    <formikForm />
     <RegistrationForm />
       <div>
         <a href="https://vite.dev" target="_blank">
