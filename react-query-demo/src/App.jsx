@@ -13,7 +13,7 @@ function App() {
 
   return (
     <>
-    <QueryClientProvider client = {queryClient}>
+    <QueryClientProvider client={queryClient}>
       <div className="App">
         <h1>React Query - Fetching posts</h1>
         <PostsComponent />
