@@ -1,5 +1,5 @@
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
-import { QueryClient, QueryClientprovider } from 'react-query'
+import { QueryClient, QueryClientProvider } from 'react-query'
 import PostsComponent from './components/PostsComponent'
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
@@ -13,13 +13,13 @@ function App() {
 
   return (
     <>
-    <QueryClientprovider client = {queryClient}>
+    <QueryClientProvider client = {queryClient}>
       <div className="App">
         <h1>React Query - Fetching posts</h1>
         <PostsComponent />
         <ReactQueryDevtools initialIsOpen={false} />
       </div>
-    </QueryClientprovider>
+    </QueryClientProvider>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
