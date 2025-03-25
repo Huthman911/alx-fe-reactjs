@@ -17,7 +17,7 @@ const Search = () => {
     setUsers([]);
 
     try {
-      const data = await fetchUsers(searchTerm, location, minRepos, page);
+      const data = await fetchUserData(searchTerm, location, minRepos, page);
       setUsers(data.items);
     } catch (err) {
       setError(true);
