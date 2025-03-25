@@ -12,7 +12,7 @@ export const fetchUsers = async (username, location, minRepos, page = 1) => {
       query += `+repos:>${minRepos}`;
     }
 
-    const response = await axios.get(`https://api.github.com/search/users?${query}&page=${page}&per_page=10`);
+    const response = await axios.get(`https://api.github.com/search/users?q`);
     return response.data;
   } catch (error) {
     throw new Error("Error fetching users");
