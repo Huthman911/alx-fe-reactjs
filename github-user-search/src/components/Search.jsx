@@ -2,24 +2,24 @@ import { useState } from "react";
 import { fetchUserData } from "../services/githubService";
 
 const Search = () => {
-  const [username, setUsername] = useState("");
+    const [searchTerm, setSearchTerm] = useState("");
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
 
   const handleSearch = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError("");
+    setError(false);
     setUserData(null);
 
     try {
-        const response = await axios.get(`https://api.github.com/users/${searchTerm}`);
-        setUserData(response.data);
-      } catch (err) {
-        setError("Looks like we can't find the user");
-      } finally {
-        setLoading(false);
+        const data = await fetchUserData(searchTerm);
+      setUserData(data);
+    } catch (err) {
+      setError(true);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -40,7 +40,7 @@ const Search = () => {
       </form>
 
       {loading && <p className="text-gray-500">Loading...</p>}
-      {error && <p className="text-red-500">{error}</p>}
+      {error && <p className="text-red-500">Looks like we can't find the user</p>}
       
       {userData && (
         <div className="border p-4 rounded shadow">
