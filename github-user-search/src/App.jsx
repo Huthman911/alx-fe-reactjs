@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="App">
-      <h1>GitHub User Search</h1>
+      <h1 className="text-center text-2xl font-bold mt-4">GitHub User Search</h1>
       <Search />
     </div>
     </>
